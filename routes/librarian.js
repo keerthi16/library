@@ -1,12 +1,10 @@
-var express = require('express');
-var router = express.Router();
-var mongoose = require('mongoose');
-var messages = require('../core/messages');
-
-var User = require('../models/users');
-var Librarian = require('../models/librarian');
-
-var Books = require('../models/books');
+var express = require('express'),
+    mongoose = require('mongoose'),
+    router = express.Router(),
+    messages = require('../core/messages'),
+    User = require('../models/users'),
+    Librarian = require('../models/librarian'),
+    Books = require('../models/books');
 
 
 router
@@ -16,7 +14,7 @@ router
             if (err) {
                 res.json({error: true, message: messages.ERROR, data: err});
             } else {
-                res.json({error: false, message: messages.SUCCESSFUL, data: user});
+                res.json({error: false, message: messages.SUCCESSFUL, data: user},
             }
         })
     })

@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var mongoose = require('mongoose');
-var messages = require('../core/messages');
-
-var Books = require('../models/books');
+var express = require('express'),
+    mongoose = require('mongoose'),
+    router = express.Router(),
+    messages = require('../core/messages'),
+    Books = require('../models/books');
 
 router
 
