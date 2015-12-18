@@ -14,7 +14,7 @@ router
             if (err) {
                 res.json({error: true, message: messages.ERROR, data: err});
             } else {
-                res.json({error: false, message: messages.SUCCESSFUL, data: user},
+                res.json({error: false, message: messages.SUCCESSFUL, data: user});
             }
         })
     })
