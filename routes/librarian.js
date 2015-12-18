@@ -3,10 +3,10 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var messages = require('../core/messages');
 
-var User = require('../models/usersModel');
-var Librarian = require('../models/librarianModel');
+var User = require('../models/users');
+var Librarian = require('../models/librarian');
 
-var Books = require('../models/booksModel');
+var Books = require('../models/books');
 
 
 router

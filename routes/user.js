@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var messages = require('../core/messages');
-var User = require('../models/usersModel');
+var User = require('../models/users');
 
-var Books = require('../models/booksModel');
+var Books = require('../models/books');
 
 router.route('/:_id')
 
