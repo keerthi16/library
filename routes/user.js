@@ -38,7 +38,6 @@ router.route('/:_id')
 
 router.route('/:_id/borrow/:bookId')
 
-
     .post(function (req, res) {
         Books.findById(req.params.bookId, function (err, books) {
             if (err) {
@@ -71,16 +70,21 @@ router.route('/:_id/return/:bookId')
             if (err) {
                 res.json({error: true, message: messages.ERROR, description: err});
             } else {
-                User.findByIdAndUpdate(req.params._id, {$pull: {books: book}}, function (err, result) {
+                Books.findByIdAndUpdate(req.params.bookId, {$pull: {user: UserId}}, function (err, result) {
                     if (err) {
-                        res.json({error: true, description: '', data: err});
+                        res.json({error: true, message: messages.ERROR, description: err});
                     } else {
-                        res.json({error: false, message: messages.SUCCESSFUL});
+                        User.findByIdAndUpdate(req.params._id, {$pull: {books: book}}, function (err, result) {
+                            if (err) {
+                                res.json({error: true, description: '', data: err});
+                            } else {
+                                res.json({error: false, message: messages.SUCCESSFUL});
+                            }
+                        })
                     }
-                })
+                });
             }
-        });
+        })
     });
-
 
 module.exports = router;
