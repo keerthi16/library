@@ -16,6 +16,7 @@
     "serve-favicon": "~2.3.0",
     "mongoose-deep-populate": "latest",
     "supertest": "latest",
-    "should": "latest"
+    "should": "latest",
+    "object-to-xml": "latest"
   }
 }

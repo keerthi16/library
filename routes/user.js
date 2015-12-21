@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
-var mongoose = require('mongoose');
-var messages = require('../core/messages');
-var User = require('../models/users');
+var express = require('express'),
+    mongoose = require('mongoose'),
+    router = express.Router(),
 
-var Books = require('../models/books');
+    messages = require('../core/messages'),
+    User = require('../models/users'),
+    Books = require('../models/books');
 
 router.route('/:_id')
 

@@ -1,4 +1,4 @@
 module.exports = {
-    SUCCESSFUL: "Successful",
+    SUCCESSFUL: "SUCCESSFUL",
     ERROR: "SOMETHING WENT WRONG"
 };

@@ -10,4 +10,4 @@ var booksSchema = new Schema({
     user: [{type: Schema.ObjectId}]
 });
 
-module.exports = mongoose.model('Books', booksSchema);
+module.exports = mongoose.model('Books', booksSchema, 'Books');

@@ -9,4 +9,4 @@ var librarianSchema = new Schema({
     phone: {type: String, required: true}
 });
 
-module.exports = mongoose.model('Librarian', librarianSchema);
+module.exports = mongoose.model('Librarian', librarianSchema, 'Librarian');
